@@ -8,14 +8,22 @@ int main() {
     std::cout << "Ingrese longitud: " << std::endl;
     std::cin >> n;
 
-    // int arr[n];
-    int suma = 0;
-    double promedio = 0;
+    int arr[n];
 
     for (int i = 0; i < n; i++)
     {
-        // arr[i] = rand() % 100 + 1;
-        suma += rand() % 100 + 1;
+        arr[i] = rand() % 100 + 1;
+        std::cout << arr[i] << " ";
+    }
+
+    int suma = 0;
+    double promedio = 0;
+
+    std::cout << std::endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        suma += arr[i];
     }
     
     promedio = suma / (double) n;
